@@ -8,5 +8,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor da DevBurger rodando em localhost:${PORT}`);
+  console.log(`Servidor da DevBurger rodando em http://localhost:${PORT}`);
 });
