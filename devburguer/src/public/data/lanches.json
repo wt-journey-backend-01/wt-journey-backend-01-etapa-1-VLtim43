@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nome": "DevBurger Clássico",
+    "ingredientes": "Pão brioche, Carne 150g, Queijo cheddar, Alface, Tomate"
+  },
+  {
+    "id": 2,
+    "nome": "DevBurger Bacon",
+    "ingredientes": "Pão australiano, Carne 180g, Bacon crocante, Queijo prato, Cebola"
+  },
+  {
+    "id": 3,
+    "nome": "DevBurger Veggie",
+    "ingredientes": "Pão integral, Hambúrguer de lentilha, Rúcula, Tomate seco, Maionese vegana"
+  }
+]
