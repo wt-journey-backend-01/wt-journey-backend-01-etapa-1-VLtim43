@@ -7,11 +7,26 @@
   {
     "id": 2,
     "nome": "DevBurger Bacon",
-    "ingredientes": "Pão australiano, Carne 180g, Bacon crocante, Queijo prato, Cebola"
+    "ingredientes": "Pão brioche, Carne 180g, Bacon crocante, Queijo prato, Cebola"
   },
   {
     "id": 3,
     "nome": "DevBurger Veggie",
     "ingredientes": "Pão integral, Hambúrguer de lentilha, Rúcula, Tomate seco, Maionese vegana"
+  },
+  {
+    "id": 4,
+    "nome": "DevBurger Duplo",
+    "ingredientes": "Pão brioche, Duplo hambúrguer 150g, Queijo cheddar, Bacon, Molho especial"
+  },
+  {
+    "id": 5,
+    "nome": "DevBurger Frango",
+    "ingredientes": "Pão brioche, Peito de frango grelhado, Alface, Tomate, Molho caesar"
+  },
+  {
+    "id": 6,
+    "nome": "DevBurger BBQ",
+    "ingredientes": "Pão australiano, Hambúrguer 180g, Queijo prato, Jalapeño, Molho Barbecue"
   }
 ]
