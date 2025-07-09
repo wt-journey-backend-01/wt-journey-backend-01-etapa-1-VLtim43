@@ -31,36 +31,34 @@ app.get("/sugestao-recebida", (req, res) => {
   }
 
   res.send(`
-    <!DOCTYPE html>
-<html lang="pt-BR">
+  <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <title>DevBurger</title>
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/layout.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>DevBurger</title>
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-</head>
+    <body>
+        <header>
+            <h1>DevBurger 🍔</h1>
+            <nav>
+                <a href="/">Início</a> |
+                <a href="/contato">Contato</a> |
+                <a href="/api/lanches">API</a>
+            </nav>
+        </header>
 
-<body>
-    <header>
-        <h1>DevBurger 🍔</h1>
-        <nav>
-            <a href="/">Início</a> |
-            <a href="/contato">Contato</a> |
-            <a href="/api/lanches">API</a>
-        </nav>
-    </header>
+        <main>
+            obrigado pela sugestão
+        </main>
 
-    <main>
-      obrigado pela sugestão
-    </main>
-
-    <footer>
-        <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-    </footer>
-</body>
-
-</html>
+        <footer>
+            <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
+        </footer>
+    </body>
+  </html>
   `);
 });
 
