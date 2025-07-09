@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-const root = path.resolve(__dirname, "..");
+const root = path.resolve(__dirname, "devburguer/src");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(root, "public")));

@@ -6,6 +6,8 @@
     <title>DevBurger</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+
 </head>
 
 <body>
@@ -19,7 +21,25 @@
     </header>
 
     <main>
-        <p>home</p>
+        <div class="parent">
+            <div class="div1">
+                <form action="/sugestao" method="get">
+                    <label for="nome">Nome do lanche:</label><br />
+                    <input type="text" id="nome" name="nome" required /><br /><br />
+
+                    <label for="ingredientes">Ingredientes:</label><br />
+                    <textarea id="ingredientes" name="ingredientes" required></textarea><br /><br />
+
+                    <button type="submit">Enviar sugestão</button>
+                </form>
+            </div>
+            <div class="div2">🍔</div>
+            <div class="div3">🍔</div>
+            <div class="div4">🍔</div>
+            <div class="div5">🍔</div>
+            <div class="div6">🍔</div>
+            <div class="div7">🍔</div>
+        </div>
     </main>
 
     <footer>
