@@ -20,11 +20,16 @@ app.get("/api/lanches", (req, res) => {
 app.post("/sugestao", (req, res) => {
   const { nome, ingredientes } = req.body;
 
-  res.redirect(`/sugestao-recebida?nome=${encodeURIComponent(nome)}`);
+  res.redirect(
+    `/sugestao?nome=${encodeURIComponent(
+      nome
+    )}&ingredientes=${encodeURIComponent(ingredientes)}`
+  );
 });
 
-app.get("/sugestao-recebida", (req, res) => {
+app.get("/sugestao", (req, res) => {
   const nome = req.query.nome;
+  const ingredientes = req.query.ingredientes;
 
   if (!nome) {
     return res.redirect("/");
@@ -51,7 +56,9 @@ app.get("/sugestao-recebida", (req, res) => {
         </header>
 
         <main>
-            obrigado pela sugestão
+            <p>Obrigado pela sugestão!</p>
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Ingredientes:</strong> ${ingredientes}</p>
         </main>
 
         <footer>
