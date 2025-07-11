@@ -18,16 +18,6 @@ app.get("/api/lanches", (req, res) => {
 });
 
 // sugestao
-app.post("/sugestao", (req, res) => {
-  const { nome, ingredientes } = req.body;
-
-  res.redirect(
-    `/sugestao?nome=${encodeURIComponent(
-      nome
-    )}&ingredientes=${encodeURIComponent(ingredientes)}`
-  );
-});
-
 app.get("/sugestao", (req, res) => {
   const nome = req.query.nome;
   const ingredientes = req.query.ingredientes;
@@ -37,7 +27,7 @@ app.get("/sugestao", (req, res) => {
   }
 
   res.send(`
-  <!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
@@ -57,76 +47,68 @@ app.get("/sugestao", (req, res) => {
         </header>
 
         <main>
-            <p>Obrigado pela sugestão!</p>
+            <h2>Obrigado pela sugestão!</h2>
             <p><strong>Nome:</strong> ${nome}</p>
             <p><strong>Ingredientes:</strong> ${ingredientes}</p>
+            <br>
+            <a href="/">Voltar para a página inicial</a>
         </main>
 
         <footer>
             <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
         </footer>
     </body>
-  </html>
+    </html>
   `);
 });
 
 // contato
 app.get("/contato", (req, res) => {
-  const { nome, email, assunto, mensagem } = req.query;
-
-  if (nome) {
-    return res.send(`
-    <!DOCTYPE html>
-      <html lang="pt-BR">
-      <head>
-          <meta charset="UTF-8" />
-          <title>Obrigado - DevBurger</title>
-          <link rel="stylesheet" href="/css/global.css" />
-          <link rel="stylesheet" href="/css/layout.css" />
-      </head>
-
-      <body>
-          <header>
-              <h1>DevBurger 🍔</h1>
-              <nav>
-                  <a href="/">Início</a> |
-                  <a href="/contato">Contato</a> |
-                  <a href="/api/lanches">API</a>
-              </nav>
-          </header>
-
-          <main>
-              <p>Obrigado pelo contato!</p>
-              <p><strong>Nome:</strong> ${nome}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Assunto:</strong> ${assunto}</p>
-              <p><strong>Mensagem:</strong> ${mensagem}</p>
-          </main>
-
-          <footer>
-              <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-          </footer>
-      </body>
-    </html>
-    `);
-  }
-
   res.sendFile(path.join(root, "views", "contato.html"));
 });
 
 app.post("/contato", (req, res) => {
   const { nome, email, assunto, mensagem } = req.body;
 
-  res.redirect(
-    `/contato?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(
-      email
-    )}&assunto=${encodeURIComponent(assunto)}&mensagem=${encodeURIComponent(
-      mensagem
-    )}`
-  );
+  res.status(200).type("html").send(`
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Contato Recebido - DevBurger</title>
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/layout.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>DevBurger 🍔</h1>
+            <nav>
+                <a href="/">Início</a> |
+                <a href="/contato">Contato</a> |
+                <a href="/api/lanches">API</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Obrigado pelo contato!</h2>
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Assunto:</strong> ${assunto}</p>
+            <p><strong>Mensagem:</strong> ${mensagem}</p>
+            <br>
+            <a href="/">Voltar para a página inicial</a>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
+        </footer>
+    </body>
+    </html>
+  `);
 });
 
-app.use((req, res) => {
+app.use((_, res) => {
   res.status(404).send("Página não encontrada. <a href='/'>Voltar</a>");
 });
 
