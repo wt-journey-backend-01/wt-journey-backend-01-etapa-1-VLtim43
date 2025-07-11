@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const burgerDivs = document.querySelectorAll(".parent > div:not(.div1)");
       lanches.slice(0, burgerDivs.length).forEach((lanche, index) => {
         burgerDivs[index + 1].innerHTML = `
-          <div class="card" id="div${index}">
-          <div>/<div>
+          <div class="card">
+          <div>
+          </div>
           
-          <div>/<div>
+          <div>
+          </div>
           </div>
         `;
       });

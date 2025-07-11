@@ -24,8 +24,8 @@
     </header>
 
     <main>
-        <div class="parent">
-            <div class="form" id="div_form">
+        <section class="grid-container">
+            <div class="first_row">
                 <form action="/sugestao" method="get" autocomplete="off">
                     <label for="nome">Nome do lanche:</label><br />
                     <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" /><br /><br />
@@ -37,15 +37,19 @@
                     <button type="submit">Enviar sugestão</button>
                 </form>
 
+                <div class="card" id="div1">🍔</div>
+                <div class="card" id="div2">🍔</div>
             </div>
-            <div class="card" id="div1">🍔</div>
-            <div class="card" id="div2">🍔</div>
-            <div class="card" id="div3">🍔</div>
-            <div class="card" id="div4">🍔</div>
-            <div class="card" id="div5">🍔</div>
-            <div class="card" id="div6">🍔</div>
-        </div>
+
+            <div class="second_row">
+                <div class="card" id="div3">🍔</div>
+                <div class="card" id="div4">🍔</div>
+                <div class="card" id="div5">🍔</div>
+                <div class="card" id="div6">🍔</div>
+            </div>
+        </section>
     </main>
+
 
 
 </body>
