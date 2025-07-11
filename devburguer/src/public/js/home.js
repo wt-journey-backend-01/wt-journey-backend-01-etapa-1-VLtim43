@@ -5,9 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((lanches) => {
       const burgerDivs = document.querySelectorAll(".parent > div:not(.div1)");
       lanches.slice(0, burgerDivs.length).forEach((lanche, index) => {
-        burgerDivs[index].innerHTML = `
-          <strong>${lanche.nome}</strong><br/>
-          <small>${lanche.ingredientes}</small>
+        burgerDivs[index + 1].innerHTML = `
+          <div class="card" id="div${index}">
+          <div>/<div>
+          
+          <div>/<div>
+          </div>
         `;
       });
     })

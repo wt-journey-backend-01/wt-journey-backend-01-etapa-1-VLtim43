@@ -5,24 +5,22 @@ body {
 }
 
 header {
-    background-color: #F2D2BD;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header nav a {
-    color: white;
-    margin: 0 10px;
-    font-weight: bold;
-}
+
 
 main {
     flex: 1;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    padding: 20px;
-}
+    padding: 20px;}
 
 footer {
     background-color: #F2D2BD;

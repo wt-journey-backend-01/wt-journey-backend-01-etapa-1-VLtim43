@@ -38,7 +38,7 @@ app.get("/sugestao", (req, res) => {
 
     <body>
         <header>
-            <h1>DevBurger 🍔</h1>
+            <h1> 🍔 DevBurger </h1>
             <nav>
                 <a href="/">Início</a> |
                 <a href="/contato">Contato</a> |
@@ -82,7 +82,7 @@ app.post("/contato", (req, res) => {
 
     <body>
         <header>
-            <h1>DevBurger 🍔</h1>
+            <h1> 🍔 DevBurger </h1>
             <nav>
                 <a href="/">Início</a> |
                 <a href="/contato">Contato</a> |

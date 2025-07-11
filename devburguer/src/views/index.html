@@ -13,17 +13,19 @@
 
 <body>
     <header>
-        <h1>DevBurger 🍔</h1>
-        <nav>
-            <a href="/">Início</a> |
-            <a href="/contato">Contato</a> |
-            <a href="/api/lanches">API</a>
-        </nav>
+        <div class="header">
+            <h1> 🍔 DevBurger </h1>
+            <nav>
+                <a href="/">Início</a> |
+                <a href="/contato">Contato</a> |
+                <a href="/api/lanches">API</a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <div class="parent">
-            <div class="div1">
+            <div class="form" id="div_form">
                 <form action="/sugestao" method="get" autocomplete="off">
                     <label for="nome">Nome do lanche:</label><br />
                     <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" /><br /><br />
@@ -36,18 +38,16 @@
                 </form>
 
             </div>
-            <div class="div2">🍔</div>
-            <div class="div3">🍔</div>
-            <div class="div4">🍔</div>
-            <div class="div5">🍔</div>
-            <div class="div6">🍔</div>
-            <div class="div7">🍔</div>
+            <div class="card" id="div1">🍔</div>
+            <div class="card" id="div2">🍔</div>
+            <div class="card" id="div3">🍔</div>
+            <div class="card" id="div4">🍔</div>
+            <div class="card" id="div5">🍔</div>
+            <div class="card" id="div6">🍔</div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-    </footer>
+
 </body>
 
 </html>
