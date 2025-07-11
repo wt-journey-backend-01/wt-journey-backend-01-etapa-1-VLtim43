@@ -3,15 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("/api/lanches")
     .then((res) => res.json())
     .then((lanches) => {
-      const burgerDivs = document.querySelectorAll(".parent > div:not(.div1)");
-      lanches.slice(0, burgerDivs.length).forEach((lanche, index) => {
-        burgerDivs[index + 1].innerHTML = `
-          <div class="card">
-          <div>
-          </div>
-          
-          <div>
-          </div>
+      const cardDivs = document.querySelectorAll(".grid_container .card");
+      lanches.slice(0, cardDivs.length).forEach((lanche, index) => {
+        cardDivs[index].innerHTML = `
+          <div class="card-content">
+            <h3>${lanche.nome}</h3>
+            <p>${lanche.ingredientes}</p>
           </div>
         `;
       });
