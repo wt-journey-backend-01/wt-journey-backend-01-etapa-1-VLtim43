@@ -6,44 +6,44 @@
     <title>Contato - DevBurger</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/home.css" />
 </head>
 
 <body>
     <header>
-        <h1> 🍔 DevBurger </h1>
-        <nav>
-            <a href="/">Início</a> |
-            <a href="/contato">Contato</a> |
-            <a href="/api/lanches">API</a>
-        </nav>
+        <div class="header">
+            <h1> 🍔 DevBurger </h1>
+            <nav>
+                <a href="/">Início</a> |
+                <a href="/contato">Contato</a> |
+                <a href="/api/lanches">API</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <div class="parent">
-            <div class="div1">
-                <form action="/contato" method="post" autocomplete="off">
-                    <label for="nome">Nome:</label><br />
-                    <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" /><br /><br />
-
-                    <label for="email">Email:</label><br />
-                    <input type="email" id="email" name="email" required /><br /><br />
-
-                    <label for="assunto">Assunto:</label><br />
-                    <input type="text" id="assunto" name="assunto" required minlength="3" maxlength="100" /><br /><br />
-
-                    <label for="mensagem">Mensagem:</label><br />
-                    <textarea id="mensagem" name="mensagem" required minlength="10"
-                        maxlength="500"></textarea><br /><br />
-
-                    <button type="submit">Enviar mensagem</button>
-                </form>
-            </div>
-        </div>
+        <section>
+            <form class="form" form action="/contato" method="post" autocomplete="off">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required minlength="3" maxlength="100" />
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required minlength="5" maxlength="500"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-    </footer>
 </body>
 
 </html>

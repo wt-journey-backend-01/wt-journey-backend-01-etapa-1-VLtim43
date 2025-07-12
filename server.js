@@ -34,6 +34,7 @@ app.get("/sugestao", (req, res) => {
         <title>DevBurger</title>
         <link rel="stylesheet" href="/css/global.css" />
         <link rel="stylesheet" href="/css/layout.css" />
+        <link rel="stylesheet" href="/css/home.css" />
     </head>
 
     <body>
@@ -45,18 +46,23 @@ app.get("/sugestao", (req, res) => {
                 <a href="/api/lanches">API</a>
             </nav>
         </header>
+        
+          <section class="sugestao_section">
+            <div class="item sugestao_feedback">
+                <h3>🍔 Obrigado pela sugestão!</h3>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <p>${nome}</p>
+                </div>
+                <div class="form-group">
+                    <label>Ingredientes:</label>
+                    <p>${ingredientes}</p>
+                </div>
+                
+            <a href="/" class="back-button">← Retornar à página inicial</a>
 
-        <main>
-            <h2>Obrigado pela sugestão!</h2>
-            <p><strong>Nome:</strong> ${nome}</p>
-            <p><strong>Ingredientes:</strong> ${ingredientes}</p>
-            <br>
-            <a href="/">Voltar para a página inicial</a>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-        </footer>
+            </div>
+          </section>
     </body>
     </html>
   `);
@@ -75,9 +81,10 @@ app.post("/contato", (req, res) => {
     <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
-        <title>Contato Recebido - DevBurger</title>
+        <title>DevBurger - Contato</title>
         <link rel="stylesheet" href="/css/global.css" />
         <link rel="stylesheet" href="/css/layout.css" />
+        <link rel="stylesheet" href="/css/home.css" />
     </head>
 
     <body>
@@ -89,20 +96,31 @@ app.post("/contato", (req, res) => {
                 <a href="/api/lanches">API</a>
             </nav>
         </header>
-
-        <main>
-            <h2>Obrigado pelo contato!</h2>
-            <p><strong>Nome:</strong> ${nome}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Assunto:</strong> ${assunto}</p>
-            <p><strong>Mensagem:</strong> ${mensagem}</p>
-            <br>
-            <a href="/">Voltar para a página inicial</a>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 VLtim43. Todos os direitos reservados.</p>
-        </footer>
+        
+        <section class="sugestao_section" >
+            <div class="sugestao_feedback">
+                <h3>🍔 Obrigado pelo contato!</h3>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <p>${nome}</p>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <p>${email}</p>
+                </div>
+                <div class="form-group">
+                    <label>Assunto:</label>
+                    <p>${assunto}</p>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem:</label>
+                    <p>
+                        ${mensagem}
+                    </p>
+                </div>
+                <a href="/" class="back-button">← Retornar à página inicial</a>
+            </div>
+        </section>
     </body>
     </html>
   `);

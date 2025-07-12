@@ -2,6 +2,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    background: hsla(43, 100%, 74%, 1);
+
+    background: linear-gradient(135deg, hsla(43, 100%, 74%, 1) 27%, rgb(255, 202, 122) 100%);
+    background: -moz-linear-gradient(135deg, hsla(43, 100%, 74%, 1) 27%, hsla(36, 100%, 74%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(43, 100%, 74%, 1) 27%, hsla(36, 100%, 74%, 1) 100%);
+
 }
 
 header {
@@ -14,18 +21,12 @@ header {
 }
 
 
-
 main {
     width: 100%;
     flex: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+    padding-top: 3rem;
 
-footer {
-    background-color: #F2D2BD;
-    color: white;
-    text-align: center;
-    padding: 15px;
 }

@@ -6,9 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const cardDivs = document.querySelectorAll(".grid_container .card");
       lanches.slice(0, cardDivs.length).forEach((lanche, index) => {
         cardDivs[index].innerHTML = `
-          <div class="card-content">
-            <h3>${lanche.nome}</h3>
-            <p>${lanche.ingredientes}</p>
+          <div class="card_content">
+            <div class="card_image">
+              <img src="/images/hamburger.png" alt="${lanche.nome}" />
+            </div>
+            <div class="card_description">
+              <h3>${lanche.nome}</h3>
+              <p>${lanche.ingredientes}</p>
+            </div>
           </div>
         `;
       });
